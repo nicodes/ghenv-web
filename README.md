@@ -1,10 +1,10 @@
-<!-- Generated from private documentation source. Do not edit directly. Source SHA256: e645c114336d6363973af415907014a56c1da24889bb491cb5f796b12d7d970e -->
+<!-- Generated from private documentation source. Do not edit directly. Source SHA256: 0037f1b9051c8b6de3975ff6463f708c3263ea3ea447cf3e66f92c3305f26005 -->
 
 # ghenv website
 
 Static usage site for [ghenv](https://github.com/nicodes/ghenv).
 
-Install the [Komizo release](https://github.com/nicodes/komizo#install) matching `komizo.lock`.
+Install the [komizo release](https://github.com/nicodes/komizo#install) matching `komizo.lock`.
 
 ```sh
 komizo dev          # Foreground development server

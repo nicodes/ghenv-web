@@ -9,5 +9,5 @@ Read the exact versioned docs before writing code:
 - TypeScript 6: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-6-0.html
 - Astro 7: https://docs.astro.build/en/guides/upgrade-to/v7/
 
-Use `make check` for the complete validation gate. Preserve the static output:
+Use `komizo check` for the complete validation gate. Preserve the static output:
 no client JavaScript, analytics, credential inputs, or live GitHub requests.

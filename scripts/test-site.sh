@@ -73,6 +73,6 @@ command = '\n'.join([
 ])
 assert page.pre.count(command) == 2, 'Handoff and setup must show the same usable command'
 assert 'ghenv local -- npm run dev' in page.pre, 'Missing credential-free local example'
-assert any('go install github.com/nicodes/ghenv@latest' in block for block in page.pre), 'Missing install command'
+assert any('curl -fsSL https://ghenv.dev/install | sh' in block for block in page.pre), 'Missing install command'
 print('Static output checks passed: product links, commands, section anchors, metadata, and no client JavaScript.')
 PY

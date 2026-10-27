@@ -1,4 +1,4 @@
-<!-- Generated from private documentation source. Do not edit directly. Source SHA256: 0037f1b9051c8b6de3975ff6463f708c3263ea3ea447cf3e66f92c3305f26005 -->
+<!-- Generated from private documentation source. Do not edit directly. Source SHA256: 8a8ceb07bb15657f38a954d12beaff4d8a365ac862a32d1bfd7bca0260373d50 -->
 
 # ghenv website
 
@@ -13,3 +13,11 @@ komizo run build    # Generate dist/
 ```
 
 Ctrl-C stops development. No runtime credentials or credential `.env` file is required.
+
+## Install the CLI
+
+```sh
+curl -fsSL https://ghenv.dev/install | sh
+```
+
+Requires Go. See [ghenv](https://github.com/nicodes/ghenv#readme) for setup and installation options.

@@ -10,4 +10,4 @@ Read the exact versioned docs before writing code:
 - Astro 7: https://docs.astro.build/en/guides/upgrade-to/v7/
 
 Use `komizo check` for the complete validation gate. Preserve the static output:
-no client JavaScript, analytics, credential inputs, or live GitHub requests.
+only the install-command clipboard module may execute in the browser. Do not add analytics, credential inputs, or live GitHub requests.

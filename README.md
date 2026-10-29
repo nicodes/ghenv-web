@@ -1,4 +1,4 @@
-<!-- Generated from private documentation source. Do not edit directly. Source SHA256: 3d43fb65b9568678fff364e60fa6b8591b57bbe363c266fc1279c207a5bae717 -->
+<!-- Generated from private documentation source. Do not edit directly. Source SHA256: ae2c4ffe629211897cde739009bc51ac82c0f6c84944854dcd4a8c97a4c0dfa2 -->
 
 # ghenv website
 
@@ -28,6 +28,6 @@ Or with mise:
 mise use --global github:nicodes/ghenv@latest
 ```
 
-Each install command has a Copy button with confirmation. If clipboard access is unavailable, the command remains selectable for manual copying.
+An icon-only copy control sits on the right inside each install-command outline and shows a checkmark after copying. If clipboard access is unavailable, the command remains selectable for manual copying.
 
 Prebuilt Linux/macOS binaries are available for x86_64 and arm64. A Go compiler is not required. See [ghenv](https://github.com/nicodes/ghenv#readme) for setup and installation options.

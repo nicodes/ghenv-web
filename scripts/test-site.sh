@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
+python3 scripts/check_install_copy.py dist
 
 python3 - <<'PY'
 from html.parser import HTMLParser
@@ -58,10 +59,10 @@ for destination in [
 assert any(tag == 'link' and attrs.get('rel') == 'canonical' and attrs.get('href') == 'https://ghenv.dev/' for tag, attrs in page.tags), 'Wrong production canonical'
 assert any(tag == 'meta' and attrs.get('property') == 'og:url' and attrs.get('content') == 'https://ghenv.dev/' for tag, attrs in page.tags), 'Wrong social URL'
 assert any(tag == 'meta' and attrs.get('name') == 'description' and attrs.get('content') for tag, attrs in page.tags), 'Missing description'
-assert not list(root.rglob('*.js')), 'Static site must ship no JavaScript files'
+assert {p.relative_to(root).as_posix() for p in root.rglob('*.js')} == {'install-copy.js'}, 'Unexpected JavaScript asset'
 for tag, attrs in page.tags:
     if tag == 'script':
-        assert attrs.get('type') == 'application/ld+json' and 'src' not in attrs, 'Executable client script found'
+        assert (attrs.get('type') == 'application/ld+json' and 'src' not in attrs) or (attrs.get('type') == 'module' and attrs.get('src') == '/install-copy.js'), 'Unexpected executable script'
 for path in ['favicon.svg', 'robots.txt']:
     assert (root / path).is_file(), f'Missing public asset: {path}'
 command = '\n'.join([
@@ -74,5 +75,5 @@ command = '\n'.join([
 assert page.pre.count(command) == 2, 'Handoff and setup must show the same usable command'
 assert 'ghenv local -- npm run dev' in page.pre, 'Missing credential-free local example'
 assert any('curl -fsSL https://ghenv.dev/install | sh' in block for block in page.pre), 'Missing install command'
-print('Static output checks passed: product links, commands, section anchors, metadata, and no client JavaScript.')
+print('Static output checks passed: product links, commands, section anchors, metadata, and clipboard-only JavaScript.')
 PY

@@ -1,4 +1,4 @@
-<!-- Generated from private documentation source. Do not edit directly. Source SHA256: bb2cfb9f548b28cfd45e68302035e0b4d71f61c3df19ce6786d0dbeff99109a1 -->
+<!-- Generated from private documentation source. Do not edit directly. Source SHA256: 05fddbf5a338bc7e72b009da75d445409fc2508414686383add691962f88aa00 -->
 
 # ghenv website
 
@@ -36,7 +36,7 @@ For contributor verification, prepare the pinned helper source before running na
 
 ```sh
 git clone https://github.com/nicodes/tools.git .ci-tools
-git -C .ci-tools checkout --detach 091101094fedf5ce2e67c339c1c9c842d6a662dc
+git -C .ci-tools checkout --detach 0f95a6df60f740b527596ed2c7f4590e3f2d5820
 mise install
 mise run check
 ```

@@ -1,15 +1,15 @@
-<!-- Generated from private documentation source. Do not edit directly. Source SHA256: ae2c4ffe629211897cde739009bc51ac82c0f6c84944854dcd4a8c97a4c0dfa2 -->
+<!-- Generated from private documentation source. Do not edit directly. Source SHA256: 4a2143afd2325690c0fa294d332ebaeb3cd6ce4379ef7db1b3add898b7814a79 -->
 
 # ghenv website
 
 Static usage site for [ghenv](https://github.com/nicodes/ghenv).
 
-Install the [komizo release](https://github.com/nicodes/komizo#install) matching `komizo.lock`.
+Install [mise](https://mise.jdx.dev/) and run `mise install`.
 
 ```sh
-komizo dev          # Foreground development server
-komizo check        # Source, type, build and static output checks
-komizo run build    # Generate dist/
+mise run dev          # Development server
+mise run check        # Source, type, build and static output checks
+mise run build    # Generate dist/
 ```
 
 Ctrl-C stops development. No runtime credentials or credential `.env` file is required.
